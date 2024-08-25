@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Summary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .popup {
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            width: 60%;
+            text-align: center;
+        }
+        .popup h2 {
+            margin-top: 0;
+        }
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff5c5c;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+        }
+        .close-button:hover {
+            background-color: #ff1c1c;
+        }
+    </style>
+    <script>
+        function closePopup() {
+            window.location.href = '/';
+        }
+    </script>
+</head>
+<body>
+    <div class="popup">
+        <button class="close-button" onclick="closePopup()">x</button>
+        <h2>Summary</h2>
+        <p>{{ summary }}</p>
+    </div>
+</body>
+</html>
